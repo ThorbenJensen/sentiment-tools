@@ -20,22 +20,12 @@ def str_to_wordlist(string):
     wordlist = list(map(lambda x: x.lower(), wordlist))
     return wordlist
     
-def score_email(textfile):
+def score_email(textfile, method = 'normalized'):
     string = eml_to_str(textfile)
     wordlist = str_to_wordlist(string)
     engine = score_engine.Engine()
-    score = engine.score_list(wordlist, method='normalized')
+    score = engine.score_list(wordlist, method)
     return score
 
-string = eml_to_str('../data/test3.eml')
-l = str_to_wordlist(string)
-engine = score_engine.Engine()
-#for word in l:
-#    print(word)
-#    print(engine.score_word(word))
-
-print( engine.score_word('fertig') )
-
-print(l)
-#print(score_email('../data/test3.eml'))
+#print(score_email('../data/test3.eml', 'sum'))
 

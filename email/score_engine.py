@@ -18,7 +18,6 @@ class Engine():
         self.dict = pd.read_sql("SELECT * FROM dict", con)
         con.close()
         # format dictionary
-        self.dict['word'] = self.dict['word'].str.lower()
         self.dict = self.dict.set_index('word').drop('index', 1).sort_index()
 
     # scores a word from dictionary (which has lower case words)
@@ -32,6 +31,6 @@ class Engine():
         score = 0
         for word in text:
             score += self.score_word(word)
-#        if method == 'normalized':
-#            score = score / len(text)            
+        if method == 'normalized':
+            score = score / len(text)            
         return score
