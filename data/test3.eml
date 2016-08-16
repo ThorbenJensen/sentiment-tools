@@ -1,0 +1,50 @@
+Message-ID: <512E77E0.3000301@ufz.de>
+Date: Wed, 27 Feb 2013 22:17:20 +0100
+From: .
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:17.0) Gecko/20130221 Thunderbird/17.0.3
+MIME-Version: 1.0
+To: .
+Subject: Re: Job auf cluster =?ISO-8859-15?Q?h=E4ngt_=2E=2E=2E?=
+References: <512E16F6.3070501@gmx.de>
+In-Reply-To: <512E16F6.3070501@gmx.de>
+Content-Type: text/plain; charset=ISO-8859-15; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Hallo Michael,
+
+darfst ihn killen. Wenn er schon lange lief, werd ich auch schon genug 
+Daten aus dem Run haben.
+
+Morgen früh mach ich mich mal auf die Suche nach dem Fehler. Und danke 
+für den Tipp!
+
+Viele Grüße,
+Thorben
+
+
+
+On 02/27/2013 03:23 PM, Michael Müller wrote:
+> Hallo Thorben,
+>
+> dein job vom Cluster hängt mit einer merkwürdigen Fehlermeldung (denn
+> die node01 ist verfügbar). So wie er letzte Nacht lief hätte er
+> eigentlich heute morgen/mittag fertig sein müssen.
+> Aber er hängt nicht nur sondern er blockiert auch meine Jobs - daher
+> würde ich ihn gerne canceln. Darf ich?
+>
+> Zur Fehlersuche: Vielleicht liegt bei Deinen jobs das Problem ja
+> woanders - bei meinen Jobs gab es Probleme, wenn die 200 cores
+> gleichzeitig auf das %WCC% zugriffen. Ich kopiere jetzt den gesamten job
+> in ein temporäres Verzeichnis. Dort scchreibt er haufenweise Dateien,
+> die auch dort analysiert werden. Die Ergebnisse schreibe ich in eine
+> Datenbank. Das funktioniert soweit ganz gut.
+>
+> Viele Grüße
+>
+> Michael
+>
+>
+>
+>
+>
+>

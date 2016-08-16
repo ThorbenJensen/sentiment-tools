@@ -8,7 +8,7 @@ Created on Mon Aug 15 21:45:39 2016
 import sqlite3 as lite
 import pandas as pd
 
-class Score(): 
+class Engine(): 
     
     # initializes Score engine from dictionary in SQLite database
     def __init__(self):      
@@ -28,8 +28,10 @@ class Score():
         else: 
             return 0
     # scores a list of words
-    def score_list(self, text):
+    def score_list(self, text, method='sum'):
         score = 0
         for word in text:
             score += self.score_word(word)
+#        if method == 'normalized':
+#            score = score / len(text)            
         return score
